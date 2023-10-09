@@ -11,7 +11,7 @@ from torchvision import transforms, datasets
 from tqdm import tqdm
 from torch.utils.tensorboard import SummaryWriter
 import matplotlib.pyplot as plt
-from eca_resnet import eca_resnet50
+
 from CoorLGNet import coorlgnet
 import xlwt
 import sklearn.metrics as sm

@@ -5,7 +5,7 @@ import torch
 from PIL import Image
 from torchvision import transforms
 import matplotlib.pyplot as plt
-
+from CoorLGNet import coorlgnet
 
 def main():
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
@@ -34,10 +34,10 @@ def main():
         class_indict = json.load(f)
 
     # create model
-    model = eca_resnet50()
+    model = coorlgnet()
 
     # load model weights
-    weights_path = "./weight/ECA_ResNet50_Myself.pth"
+    weights_path = "./weight/best.pth"
     #assert os.path.exists(weights_path), "file: '{}' dose not exist.".format(weights_path)
 
     in_channel = model.fc.in_features
