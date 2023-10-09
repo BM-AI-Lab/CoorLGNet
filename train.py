@@ -288,13 +288,9 @@ def main(args):
 
 
 
-    # model = res2net50_26w_4s(num_classes=args.num_classes).to(device)
-    # model = convnext_base(num_classes=args.num_classes).to(device)
-    # model = vit_base_patch16_224_in21k(num_classes=args.num_classes).to(device)
-    model = cmt_s(num_classes=args.num_classes).to(device)
-    # model = eca_resnet50(num_classes=args.num_classes).to(device)
-    # model = cmt_s(drop_path_rate=0.1).to(device)
-    # model = cmt_s().to(device)
+
+    model = coorlgnet(num_classes=args.num_classes).to(device)
+
     print("batch_size:", args.batch_size)
     print("lr:", args.lr)
     print("weight_decay:", args.weight_decay)
